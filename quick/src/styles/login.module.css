@@ -1,0 +1,18 @@
+.main{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: rgba(255,255,255,.7);
+    max-width: 580px;
+    padding: 1em;
+}
+.card>image{
+    max-width: 300px;
+}

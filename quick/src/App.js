@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+import RoutesComponent from './routes/Routes';
+import { ModalContext } from './context/ModalContext';
+import { UserContext } from './context/UserContext';
+import ModalAlert from './components/subcomponents/Modal';
+import AuthService from './services/AuthService';
+import Header from './components/subcomponents/Header';
 
 function App() {
+  const [modal, setModal] = useState(null);
+  const [user, setUser] = useState(null);
+
+  useEffect(()=>{
+    //check user
+    AuthService.getUser().then(setUser);
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <UserContext.Provider value={{ user, setUser }}>
+      <Header/>
+        <ModalContext.Provider value={{ modal, setModal }}>
+          <RoutesComponent typeUser={user?.type_user} />
+          <ModalAlert />
+        </ModalContext.Provider >
+      </UserContext.Provider>
+    </Router >
   );
 }
 

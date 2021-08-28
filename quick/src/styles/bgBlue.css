@@ -1,0 +1,21 @@
+
+.bgBlue{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.bgBlue>*:not(.bgBlueNoLook){
+    position: relative;
+}
+.bgBlueNoLook{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    object-fit: cover;
+    opacity: .6;
+    z-index: 0;
+}

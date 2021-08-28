@@ -1,0 +1,10 @@
+.title{
+    color: var(--color-main);
+    font-size: 8em;
+    font-weight: bold;
+}
+.subtitle{
+    color: var(--color-main);
+    font-size: 1.2em;
+    margin-top: 0;
+}

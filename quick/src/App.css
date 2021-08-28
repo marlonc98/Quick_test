@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --color-main: #972470;
+    --color-secondary: #FF9900;
+    --color-secondary-dark: #dd8604;
+    --color-main-light: #E1F4FF;
+    --color-main-dark: #0D4060;
+    --color-main-gray-light: #e6e6e6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body a {
+    text-decoration: none;
+    color: var(--color-main);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fullHeightVh {
+    height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.minFullHeightVh {
+    min-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.minFullHeightVh>div:not(.footer):not(.navbar) {
+    flex: 1;
+}
+
+.bgMain a, .bgMainDark a, .bgBlue a {
+    color: white;
+}
+
+.bgMain {
+    background-color: var(--color-main);
+}
+
+.bgWhite {
+    background-color: white;
+}
+
+.bgMainDark {
+    background-color: var(--color-main-dark);
+}
+
+.colorWhite {
+    color: white;
+}
+
+a.colorMain, .colorMain {
+    color: var(--color-main);
+}
+
+.bgMainLight {
+    background-color: var(--color-main-gray-light);
+}
+
+.colorMainLight {
+    color: var(--color-main-light);
+}
+
+.btnMain {
+    background-color: var(--color-main);
+    color: white;
+}
+
+.btnMain:hover {
+    color: white;
+    background-color: var(--color-main-dark);
+}
+
+.btnMainOutlined {
+    color: var(--color-main);
+    border-color: var(--color-main);
+}
+
+.btnWhiteOutlined {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+}
+
+.btnSecondary {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.btnSecondary:hover {
+    color: white;
+    background-color: var(--color-secondary-dark);
+}
+
+.btnSecondaryOutlined {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.nav-link {
+    text-transform: capitalize;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.subTitle {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.modal-title {
+    width: 100%;
+}
+
+.modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.noVisible {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.hover:hover {
+    cursor: pointer;
+}
+
+.fitCover {
+    object-fit: cover;
+}
+
+.subTitleBanner {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.m80vh {
+    min-height: 80vh;
+}
+
+.input-group .form-group {
+    flex: 1 1 auto;
 }

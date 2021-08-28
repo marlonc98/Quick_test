@@ -1,0 +1,48 @@
+
+.droppingCard>*{
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+}
+.droppingCard.small{
+    height: 223px;
+}
+.droppingCard.medium{
+    height: 300px;
+}
+.droppingCard.large{
+    height: 476px;
+}
+.droppingCard:not(:hover)>.noFocus{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.droppingCard:hover>.noFocus{
+    display: none;
+}
+.droppingCard>.noFocus>span{
+    position: relative;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.droppingCard:not(:hover)>.noFocus::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .32;
+    background-color: black;
+}
+.droppingCard:not(:hover)>.focused{
+    display: none;
+}
+.droppingCard:hover>.focused{
+    height: 100%;
+    width: 100%;
+}

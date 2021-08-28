@@ -1,0 +1,9 @@
+.contactContainer label{
+    color: white;
+}
+
+@media screen and (max-width: 669px) {
+    .bgContact:before {
+        background-size: cover;
+    }
+}

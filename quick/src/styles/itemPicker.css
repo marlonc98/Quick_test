@@ -1,0 +1,5 @@
+.cardItemPicker.active{
+    background-color: var(--color-main);
+    color: white;
+    flex:1;
+}

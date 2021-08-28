@@ -1,0 +1,29 @@
+.imageAssociate{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.associateCard{
+    min-height: 290px;
+    border-radius: 10px;
+    color: white;
+    fill: white;
+}
+.contentCardAssociate{
+    padding: 1em;
+}
+.bgName{
+    position: absolute;
+    bottom: 1em;
+    left: 2.2em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.bgCorner{
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    opacity: .6;
+    width: calc(100% - 30px);
+}
